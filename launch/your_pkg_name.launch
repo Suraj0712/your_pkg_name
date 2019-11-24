@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launch file -->
+
+<launch>
+    <!-- Defining the node and executable and publishing the output on terminal-->
+    <node name="your_pkg_name_node" pkg="your_pkg_name" type="your_pkg_name_node" output="screen">
+        <!-- loading the parameters from yaml file during th runtime -->
+        <rosparam command="load" file="$(find your_pkg_name)/config/your_pkg_name.yaml"/>
+    </node>
+</launch>
